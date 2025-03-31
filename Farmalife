@@ -1,0 +1,59 @@
+#include <stdio.h>
+#include <locale.h>
+
+int main() {
+    int opcao, quant;
+    float total = 0.0;
+
+    do {
+    printf("\n----Farmalife Happy Nation----\n");
+    printf("Escolha um medicamento:\n");
+    printf("[1]. Paracetamol - R$5,00\n");
+    printf("[2]. Ibuprofeno  - R$7,50\n");
+    printf("[3]. Dipirona    - R$4,00\n");
+    printf("[4]. Amoxicilina - R$12,00\n");
+    printf("[5]. Sair\n");
+    printf("Digite sua opcao:\n");
+    scanf("%d", &opcao);
+    
+	switch (opcao) {
+    case 1:
+    printf("Quantas unidades de Paracetamol voce deseja comprar?\n");
+    scanf("%d", &quant);
+    total += quant * 5.00;
+    printf("Total: R$%.2f\n", total);
+    break;
+    
+    case 2:
+    printf("Quantas unidades de Ibuprofeno voce deseja comprar?\n");
+    scanf("%d", &quant);
+    total += quant * 7.50;
+    printf("Total: R$%.2f\n", total);
+    break;
+    
+    case 3:
+    printf("Quantas unidades de Dipirona voce deseja comprar?\n");
+    scanf("%d", &quant);
+    total += quant * 4.00;
+    printf("Total: R$%.2f\n", total);
+    break;
+    
+    case 4:
+    printf("Quantas unidades de Amoxicilina voce deseja comprar?\n");
+    scanf("%d", &quant);
+    total += quant * 12.00;
+    printf("Total: R$%.2f\n", total);
+    break;
+    
+    case 5:
+    printf("To Saindo Rapaziada...\n");
+    break;
+    
+    default:
+    printf("Opção invalida! Por favor, escolha uma das opcao entre 1 e 5.\n");
+    }
+    } while (opcao !=5);
+    printf("Valor total das compras e R$%.2f\n", total);
+    
+    return 0;
+}
